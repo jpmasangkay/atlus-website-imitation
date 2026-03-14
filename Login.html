@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Login to your Atlus account" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/login.css" />
+  <title>Atlus Login</title>
+</head>
+
+<body>
+  <nav class="navbar">
+    <img src="Images/Atlus.png" class="Logo" alt="Atlus Logo">
+
+    <ul class="nav-links">
+      <input type="checkbox" id="checkbox_toggle" />
+      <label for="checkbox_toggle" class="boom">&#9776;</label>
+
+      <div class="menu">
+        <li><a href="Index.html">Home</a></li>
+        <li><a href="Games.html">Games</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+        <li><a href="Login.html" id="Account"><i class="fa fa-user-circle-o"></i></a></li>
+      </div>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <div class="wrapper">
+      <div class="title"><span>Login User</span></div>
+      <form action="#">
+        <div class="row">
+          <i class="fa fa-user"></i>
+          <input type="text" placeholder="Email or Phone" required>
+        </div>
+        <div class="row">
+          <i class="fa fa-lock"></i>
+          <input type="password" placeholder="Password" required>
+        </div>
+        <div class="pass"><a href="#">Forgot password?</a></div>
+        <div class="row button">
+          <input type="submit" value="Login">
+        </div>
+        <div class="signup-link">Not a member? <a href="Registration.html">Signup now</a></div>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>

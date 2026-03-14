@@ -1,0 +1,107 @@
+/* ===== ABOUT PAGE LAYOUT ===== */
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 30px 20px;
+}
+
+/* ===== TWO-COLUMN SECTIONS ===== */
+.first {
+    flex: 1 1 45%;
+    color: white;
+    min-width: 280px;
+}
+
+.second {
+    flex: 1 1 45%;
+    color: white;
+    min-width: 280px;
+}
+
+.about-content h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.about-content h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: rgba(255, 255, 255, 0.9);
+    border-left: 4px solid #c0392b;
+    padding-left: 12px;
+}
+
+.about-content p {
+    text-align: justify;
+    line-height: 1.7;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* ===== FULL-WIDTH SECTION ===== */
+.third {
+    width: 100%;
+    color: white;
+    padding: 20px 0;
+}
+
+.third h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: rgba(255, 255, 255, 0.9);
+    border-left: 4px solid #c0392b;
+    padding-left: 12px;
+}
+
+.third p {
+    text-align: justify;
+    line-height: 1.7;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.9);
+    padding: 0 20px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media screen and (max-width: 990px) {
+    .about-content {
+        flex-direction: column;
+    }
+
+    .first,
+    .second {
+        flex-basis: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about-content h1 {
+        font-size: 28px;
+    }
+
+    .about-content h3,
+    .third h3 {
+        font-size: 18px;
+    }
+
+    .about-content p,
+    .third p {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .about-content {
+        padding: 15px 10px;
+        gap: 20px;
+    }
+
+    .about-content h1 {
+        font-size: 24px;
+    }
+
+    .third p {
+        padding: 0 10px;
+    }
+}

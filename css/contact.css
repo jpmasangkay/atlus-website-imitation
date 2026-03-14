@@ -1,0 +1,78 @@
+/* ===== CONTACT PAGE LAYOUT ===== */
+.contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 30px 20px;
+}
+
+.first {
+    flex: 1 1 45%;
+    color: white;
+    min-width: 280px;
+}
+
+.second {
+    flex: 1 1 45%;
+    color: white;
+    min-width: 280px;
+}
+
+.contact-content h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.contact-content h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: rgba(255, 255, 255, 0.9);
+    border-left: 4px solid #c0392b;
+    padding-left: 12px;
+}
+
+.contact-content p {
+    text-align: left;
+    line-height: 1.7;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 15px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media screen and (max-width: 990px) {
+    .contact-content {
+        flex-direction: column;
+    }
+
+    .first,
+    .second {
+        flex-basis: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contact-content h1 {
+        font-size: 28px;
+    }
+
+    .contact-content h3 {
+        font-size: 18px;
+    }
+
+    .contact-content p {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .contact-content {
+        padding: 15px 10px;
+        gap: 20px;
+    }
+
+    .contact-content h1 {
+        font-size: 24px;
+    }
+}

@@ -1,0 +1,80 @@
+/* ===== GAMES PAGE ===== */
+.games-content {
+    padding: 20px;
+}
+
+.games-content h1 {
+    font-size: 36px;
+    text-align: center;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.games-content hr {
+    margin-bottom: 15px;
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* ===== GAME CARDS GRID ===== */
+.game-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.game-grid a {
+    display: block;
+}
+
+.game-grid img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    padding: 10px;
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 4px 6px 10px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.game-grid img:hover {
+    background-color: #c0392b;
+    cursor: pointer;
+    transform: translateY(-4px);
+}
+
+/* ===== RESPONSIVE ===== */
+@media screen and (max-width: 768px) {
+    .games-content h1 {
+        font-size: 28px;
+    }
+
+    .game-grid img {
+        width: 160px;
+        height: 160px;
+        padding: 8px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .games-content {
+        padding: 10px;
+    }
+
+    .games-content h1 {
+        font-size: 22px;
+    }
+
+    .game-grid {
+        gap: 10px;
+    }
+
+    .game-grid img {
+        width: 130px;
+        height: 130px;
+        padding: 6px;
+        border-radius: 8px;
+    }
+}

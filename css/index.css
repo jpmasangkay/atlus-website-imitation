@@ -1,0 +1,164 @@
+/* ===== MAIN CONTENT WRAPPER ===== */
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* ===== GAMES SECTION (LEFT) ===== */
+.first {
+    flex: 2 1 600px;
+    min-width: 0;
+}
+
+.first h1 {
+    font-size: 36px;
+    text-align: center;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.first hr {
+    margin-bottom: 15px;
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* ===== GAME CARDS GRID ===== */
+.game-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.game-grid a {
+    display: block;
+}
+
+.game-grid img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    padding: 10px;
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 4px 6px 10px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.game-grid img:hover {
+    background-color: #c0392b;
+    cursor: pointer;
+    transform: translateY(-4px);
+}
+
+/* ===== ANNOUNCEMENTS SIDEBAR (RIGHT) ===== */
+.second {
+    flex: 1 1 280px;
+    min-width: 260px;
+}
+
+.second h3 {
+    text-align: center;
+    color: white;
+    background-color: #c0392b;
+    border-radius: 5px;
+    padding: 8px 12px;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.Announce {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.Announce h4 {
+    text-align: center;
+    color: white;
+    background-color: #c0392b;
+    border-radius: 4px;
+    padding: 6px 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.Announce h5 {
+    text-align: left;
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.Announce p {
+    text-align: justify;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media screen and (max-width: 990px) {
+    .main-content {
+        flex-direction: column;
+    }
+
+    .first,
+    .second {
+        flex-basis: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .first h1 {
+        font-size: 28px;
+    }
+
+    .game-grid img {
+        width: 160px;
+        height: 160px;
+        padding: 8px;
+    }
+
+    .second h3 {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .main-content {
+        padding: 10px;
+        gap: 15px;
+    }
+
+    .first h1 {
+        font-size: 22px;
+    }
+
+    .game-grid {
+        gap: 10px;
+    }
+
+    .game-grid img {
+        width: 130px;
+        height: 130px;
+        padding: 6px;
+        border-radius: 8px;
+    }
+
+    .Announce {
+        padding: 15px;
+    }
+
+    .Announce h4 {
+        font-size: 14px;
+    }
+
+    .Announce p {
+        font-size: 13px;
+    }
+}

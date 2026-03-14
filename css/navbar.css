@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Trebuchet MS', 'Segoe UI', sans-serif;
+  background-color: #3678b3;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/* ===== LOGO ===== */
+.Logo {
+  width: 120px;
+  height: 40px;
+  flex-shrink: 0;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background-color: white;
+  color: black;
+  font-weight: 900;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a {
+  color: black;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: white;
+}
+
+/* ===== MENU ===== */
+.menu {
+  display: flex;
+  gap: 0.5em;
+  font-size: 22px;
+  align-items: center;
+}
+
+.menu li {
+  padding: 5px 14px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.menu li:hover {
+  background-color: #3678b3;
+}
+
+/* ===== HAMBURGER TOGGLE ===== */
+input[type=checkbox] {
+  display: none;
+}
+
+.boom {
+  display: none;
+  font-size: 30px;
+  user-select: none;
+  cursor: pointer;
+}
+
+/* ===== FOOTER (shared) ===== */
+.footer {
+  width: 100%;
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+  clear: both;
+  margin-top: 40px;
+}
+
+.footer .footer-socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.footer .footer-socials img {
+  margin: 0;
+  transition: transform 0.2s ease;
+}
+
+.footer .footer-socials img:hover {
+  cursor: pointer;
+  transform: scale(1.15);
+}
+
+.footer .footer-text {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 990px) {
+  .menu {
+    position: absolute;
+    display: none;
+    background-color: white;
+    right: 0;
+    left: 0;
+    top: 70px;
+    text-align: center;
+    padding: 16px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    z-index: 999;
+  }
+
+  .menu li:hover {
+    display: inline-block;
+    background-color: #3678b3;
+  }
+
+  .menu li + li {
+    margin-top: 8px;
+  }
+
+  input[type=checkbox]:checked ~ .menu {
+    display: flex;
+  }
+
+  .boom {
+    display: block;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar {
+    padding: 10px 15px;
+  }
+
+  .Logo {
+    width: 100px;
+    height: 33px;
+  }
+
+  .menu {
+    font-size: 18px;
+    top: 55px;
+  }
+}
